@@ -8,7 +8,7 @@ h1 {
 }
 
 body {
-   font-family: "Press Start 2P", cursive;
+   font-family: "Press Start 2P",monospace;
    background-color: #1b1b1b;
    color:#00ffcc;
    margin: 0;
