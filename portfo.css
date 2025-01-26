@@ -2,10 +2,8 @@ h1 {
     font-family: 'VT323', monospace;
     font-size: 3rem;
     color: #00ffcc;
+    text-align:center;
     text-shadow: 0 0 10px #00ffcc;
-}
-h1:hover {
-    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffcc;
     animation: glitch 0.5s infinite alternate;
 }
 
@@ -17,19 +15,12 @@ body {
    padding: 0;
 }
 
-section p {
-    font-size: 1.2rem;
-}
-
-a:hover {
-    color: #ff00ff;
-}
-
 nav ul {
-    list-style: none;
-    display:flex;
-    gap: 20px;
-    padding: 0;
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+   padding: 0;
 }
 
 nav a {
@@ -38,14 +29,12 @@ nav a {
     padding: 10px 20px;
     border: 2px solid #00ffcc;
     background: #000;
-    font-family: 'Press Start 2P', cursive;
     transition: all 0.3s;
 }
 nav a:hover {
-    background: #00ffcc;
-    color: #000;
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffcc;
+    animation: glitch 0.5s infinite alternate;
 }
-
 
 section {
     border: 3px solid #00ffcc;
@@ -55,6 +44,10 @@ section {
     background: rgba(0,0,0,0.8);
     transition: all 0.5s ease-in-out;
 }
+section p {
+    font-size: 1.2rem;
+}
+
 
 .skill-bar {
     width: 100%;
@@ -62,10 +55,10 @@ section {
     height: 30px;
     background: #222;
     border: 2px solid #00ffcc;
-    box-shadow: 0 0 10px rgba(0, 225, 204,0.8);
+    box-shadow: 0 0 15px rgba(0, 225, 204, 0.8);
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .skill-fill {
     width: 80%;
@@ -79,8 +72,8 @@ section {
     100% {width: 80%; }
 }
 .html-skills {width: 90%; }
-.css-skill {width: 85%; }
-.js-skill { width: 75%; }
+.css-skill {width: 65%; }
+.js-skill { width: 35%; }
 .game-skill { width: 80%; }
 
 footer {
@@ -88,23 +81,11 @@ footer {
     padding: 20px;
     background: #000;
     color: #00ffcc;
-    font-family: 'Press Start 2P';
 }
 
 @keyframes glitch {
     0% { transform: translateX(2px); }
     100% { transform: translateX(-2px); }
-}
-
-button:active{
-    transform: translateY(3px);
-}
-
-.parallax {
-    background: url('game-background.png') no-repeat center center fixed;
-    background-size: cover;
-    height:100vh;
-
 }
 
 button:active{
