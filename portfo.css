@@ -1,18 +1,24 @@
-body {
-    font-family: "Press Start 2P", cursive;
-    background-color: #1a1a1a;
-    color: #fff
-}
 h1 {
     font-family: 'VT323', monospace;
     font-size: 3rem;
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc;
 }
+h1:hover {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffcc;
+    animation: glitch 0.5s infinite alternate;
+}
 
 body {
-    background:#1b1b1b;
-    color:#00ffcc;
+   font-family: "Press Start 2P", cursive;
+   background-color: #1b1b1b;
+   color:#00ffcc;
+   margin: 0;
+   padding: 0;
+}
+
+section p {
+    font-size: 1.2rem;
 }
 
 a:hover {
@@ -23,6 +29,7 @@ nav ul {
     list-style: none;
     display:flex;
     gap: 20px;
+    padding: 0;
 }
 
 nav a {
@@ -31,10 +38,75 @@ nav a {
     padding: 10px 20px;
     border: 2px solid #00ffcc;
     background: #000;
-    font-family: 'Press Start 2p', cursive;
+    font-family: 'Press Start 2P', cursive;
     transition: all 0.3s;
 }
-nav a hover {
+nav a:hover {
     background: #00ffcc;
     color: #000;
+}
+
+
+section {
+    border: 3px solid #00ffcc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    transition: all 0.5s ease-in-out;
+}
+
+.skill-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    background: #222;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 225, 204,0.8);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.skill-fill {
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, #ff0000, #800000);
+
+}
+
+@keyframes fillBar {
+    0% {width: 0%; }
+    100% {width: 80%; }
+}
+.html-skills {width: 90%; }
+.css-skill {width: 85%; }
+.js-skill { width: 75%; }
+.game-skill { width: 80%; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #00ffcc;
+    font-family: 'Press Start 2P';
+}
+
+@keyframes glitch {
+    0% { transform: translateX(2px); }
+    100% { transform: translateX(-2px); }
+}
+
+button:active{
+    transform: translateY(3px);
+}
+
+.parallax {
+    background: url('game-background.png') no-repeat center center fixed;
+    background-size: cover;
+    height:100vh;
+
+}
+
+button:active{
+    transform: translateY(3px);
 }
